@@ -12,6 +12,8 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
+alias dv="cd ~/Developer"
+alias dvr="cd ~/Developer/repos"
 alias p="cd ~/projects"
 alias g="git"
 
@@ -146,3 +148,8 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Java home for different versions
+alias jhome='export JAVA_HOME=`/usr/libexec/java_home -v 18`'
+alias j11home='export JAVA_HOME=`/usr/libexec/java_home -v 11`'
+alias j8home='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
