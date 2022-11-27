@@ -22,6 +22,10 @@ fi
 
 # Install command-line tools using Homebrew.
 
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
+brew install --cask font-3270-nerd-font font-caskaydia-cove-nerd-font font-fira-code-nerd-font font-hurmit-nerd-font font-heavy-data-nerd-font
+
 # Make sure we’re using the latest Homebrew.
 brew update
 
