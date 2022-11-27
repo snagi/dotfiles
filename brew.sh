@@ -112,6 +112,13 @@ brew install openjdk@11
 sudo ln -sfn $(brew --prefix openjdk@11)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 brew install openjdk@8
 sudo ln -sfn $(brew --prefix openjdk@8)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
+brew install openjdk@11
+sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+
+brew install gradle
+brew install gradle-completion
+brew install docker
+brew install docker-machine
 
 brew tap thought-machine/please
 brew install please
@@ -120,6 +127,7 @@ brew install please
 brew install drawio
 brew install iterm2
 brew install visual-studio-code
+brew install --cask virtualbox
 
 # Remove outdated versions from the cellar.
 brew cleanup
