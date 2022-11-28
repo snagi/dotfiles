@@ -33,3 +33,6 @@ export KUBECONFIG=~/.kube/config
 for config in ~/.kube/configs/*; do
   export KUBECONFIG=${KUBECONFIG}:${config}
 done
+
+# Tell Docker CLI to talk to minikube's VM
+eval $(minikube docker-env)

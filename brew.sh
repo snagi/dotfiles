@@ -141,8 +141,15 @@ sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaV
 
 brew install gradle
 brew install gradle-completion
+
+# Install hyperkit and minikube
+brew install hyperkit
+brew install minikube
+
+# Install Docker CLI
 brew install docker
 brew install docker-machine
+brew install docker-compose
 
 brew tap thought-machine/please
 brew install please
@@ -151,7 +158,6 @@ brew install please
 brew install drawio
 brew install iterm2
 brew install visual-studio-code
-brew install --cask virtualbox
 
 # Remove outdated versions from the cellar.
 brew cleanup
