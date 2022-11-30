@@ -181,3 +181,7 @@
 [init]
 
 	defaultBranch = main
+
+[user]
+	name = Sushil Nagi
+	email = sushil.nagi@gmail.com

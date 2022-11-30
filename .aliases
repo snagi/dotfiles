@@ -153,3 +153,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias jhome='export JAVA_HOME=`/usr/libexec/java_home -v 18`'
 alias j11home='export JAVA_HOME=`/usr/libexec/java_home -v 11`'
 alias j8home='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
+
+
+alias bldvpn='gcloud compute start-iap-tunnel mgmt-pe-bld-01-cin-euwe1b-openvpn-iap 1194 --local-host-port=localhost:1194 --zone=europe-west1-b --project mgmt-vpn-bld-1733'
+alias tstvpn='gcloud compute start-iap-tunnel mgmt-pe-tst-01-cin-euwe2a-openvpn-iap 1194 --local-host-port=localhost:1194 --zone=europe-west2-a --project mgmt-vpn-tst-7312'
