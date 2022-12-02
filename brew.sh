@@ -109,8 +109,8 @@ brew install screen
 # # Install other useful binaries.
 # brew install ack
 # #brew install exiv2
-# brew install git
-# brew install git-lfs
+brew install git
+brew install git-lfs
 # brew install gs
 # brew install imagemagick --with-webp
 # brew install lua
@@ -127,6 +127,7 @@ brew install screen
 
 # Install command line apps.
 brew install starship
+brew install gh
 brew install go
 brew install k9s
 brew install k3d
