@@ -1,8 +1,8 @@
 # Load the shell dotfiles, and then some:
-for file in ~/.{common_profile}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;
+# for file in ~/.{common_profile}; do
+# 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+# done;
+# unset file;
 
 # Case-insensitive globbing (used in pathname expansion)
 setopt nocaseglob;
@@ -23,7 +23,7 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.z
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 source <(plz --completion_script)
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
-[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-nvm use default
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+# [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# nvm use default

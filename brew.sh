@@ -144,6 +144,8 @@ sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaV
 brew install gradle
 brew install gradle-completion
 
+brew install google-cloud-sdk
+
 # Install hyperkit and minikube
 brew install hyperkit
 brew install minikube

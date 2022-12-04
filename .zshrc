@@ -3,6 +3,10 @@
 
 # Load ZSH profile
 source "$HOME/.zsh_profile";
+source "$HOME/.common_profile";
+for file in $HOME/.{path,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -108,3 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Tell Docker CLI to talk to minikube's VM
+eval $(minikube docker-env)
