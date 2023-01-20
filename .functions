@@ -215,6 +215,23 @@ function gitUser() {
 	fi
 }
 
+function gcpKubeConfig() {
+	if [ $# -ge 2 ]; then
+		NAME=$1
+		CLUSTER=$2
+		REGION=$3
+		FILE=$NAME
+	else
+		CLUSTER=$1
+		NAME=${CLUSTER}
+		FILE="gcp"
+	fi
+  rm -rf ~/.kube/configs/${FILE}.yaml
+	KUBECONFIG=~/.kube/configs/${FILE}.yaml gcloud container clusters get-credentials --region=${REGION:-europe-west2} $CLUSTER
+	sed -i "s/gke.*${CLUSTER}/${NAME}/g" ~/.kube/configs/${FILE}.yaml
+	export KUBECONFIG=${KUBECONFIG}:~/.kube/configs/${FILE}.yaml
+}
+
 function test() {
 	echo $@
 	echo $1

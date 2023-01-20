@@ -42,3 +42,4 @@ export JAVA_HOME=`/usr/libexec/java_home -v 18`
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:$(brew --prefix gnu-sed)/libexec/gnubin:$(brew --prefix grep)/libexec/gnubin:$PATH:$HOME/.pub-cache/bin"
 
+unset PAGER
