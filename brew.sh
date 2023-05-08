@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-if [ -d /opt/homebrew/bin ]
-then 
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
 # Install brew if not installed
 if ! command -v brew &> /dev/null
 then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if [ -d /opt/homebrew/bin ]
+then 
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # Install oh-my-zsh
