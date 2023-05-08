@@ -1,5 +1,7 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+export PATH="$HOME/.local/bin:$PATH";
+
+eval $(/opt/homebrew/bin/brew shellenv)
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -35,4 +37,4 @@ for config in ~/.kube/configs/*; do
 done
 
 # Tell Docker CLI to talk to minikube's VM
-eval $(minikube docker-env)
+# eval $(minikube docker-env)

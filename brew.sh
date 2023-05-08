@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ -d /opt/homebrew/bin ]
+then 
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Install brew if not installed
 if ! command -v brew &> /dev/null
 then
@@ -142,7 +147,7 @@ brew install openjdk@11
 sudo ln -sfn $(brew --prefix openjdk@11)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 brew install openjdk@8
 sudo ln -sfn $(brew --prefix openjdk@8)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
-brew install openjdk@11
+brew install openjdk@17
 sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 
 brew install gradle
@@ -151,21 +156,31 @@ brew install gradle-completion
 brew install google-cloud-sdk
 
 # Install hyperkit and minikube
-brew install hyperkit
-brew install minikube
+#brew install hyperkit
+#brew install minikube
 
 # Install Docker CLI
 brew install docker
-brew install docker-machine
+brew install docker-credential-helper
 brew install docker-compose
+brew install colima
+brew install microk8s
+brew install multipass
 
-brew tap thought-machine/please
-brew install please
+# brew tap thought-machine/please
+# brew install please
 
 # Install cask application
 brew install drawio
 brew install iterm2
 brew install visual-studio-code
+brew install bitwarden
+brew install rectangle
+brew install maccy
+
+google-chrome
+google-drive
+microsoft-remote-desktop
 
 # Remove outdated versions from the cellar.
 brew cleanup
