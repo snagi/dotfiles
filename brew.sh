@@ -177,10 +177,9 @@ brew install visual-studio-code
 brew install bitwarden
 brew install rectangle
 brew install maccy
-
-google-chrome
-google-drive
-microsoft-remote-desktop
+brew install google-chrome
+brew install google-drive
+brew install microsoft-remote-desktop
 
 # Remove outdated versions from the cellar.
 brew cleanup
