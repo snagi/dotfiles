@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt install build-essential
+sudo apt install -y build-essential
 
 # Install brew if not installed
 if ! command -v brew &> /dev/null

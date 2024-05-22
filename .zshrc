@@ -139,6 +139,8 @@ source <(kubectl completion zsh)
 
 complete -o default -o nospace -F _kubectl k;
 
+alias ess='eval "$(starship init zsh)"'
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
