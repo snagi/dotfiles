@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+sudo apt install build-essential
+
 # Install brew if not installed
 if ! command -v brew &> /dev/null
 then
@@ -155,6 +157,9 @@ brew install openjdk
 # sudo ln -sfn $(brew --prefix openjdk@11)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 # brew install openjdk@17
 # sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+brew install python@3.11
+brew install python@3.12
+
 
 brew install gradle
 brew install gradle-completion
@@ -166,20 +171,20 @@ brew install azure-cli
 # #brew install hyperkit
 # #brew install minikube
 
-# # Install Docker CLI
-# brew install kubectl
+# Install Docker CLI
+brew install kubectl
 # brew install docker
 # brew install docker-credential-helper
 # brew install docker-compose
 # brew install colima
-# brew install helm
+brew install helm
 # brew install terraformer aztfexport
 
-# brew tap hashicorp/tap
-# brew install hashicorp/tap/terraform
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 
-# brew tap thought-machine/please
-# brew install please
+brew tap thought-machine/please
+brew install please
 
 # # Install cask application
 # brew install --cask drawio

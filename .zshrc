@@ -1,7 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
-eval $(/opt/homebrew/bin/brew shellenv)
+if [ -d /opt/homebrew/bin ]
+then 
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+if [ -d /home/linuxbrew/.linuxbrew/bin ]
+then 
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # Load ZSH profile
 source "$HOME/.zsh_profile";
@@ -121,8 +128,11 @@ source $ZSH/oh-my-zsh.sh
 
 source "$HOME/.common_profile";
 
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+if [ -d $(brew --prefix)/share/google-cloud-sdk ]
+then
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+fi
 source <(plz --completion_script)
 source "$(brew --prefix azure-cli)/etc/bash_completion.d/az"
 source <(kubectl completion zsh)
