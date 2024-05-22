@@ -60,22 +60,22 @@ fnt install fonts-firacode
 # brew install coreutils
 # ln -s "${BREW_PREFIX}/bin/gsha256sum" "${BREW_PREFIX}/bin/sha256sum"
 
-# # Install some other useful utilities like `sponge`.
-# brew install moreutils
-# # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-# brew install findutils
-# # Install GNU `sed`, overwriting the built-in `sed`.
-# # Don’t forget to add `$(brew --prefix gnu-sed)/libexec/gnu-sed` to `$PATH`.
-# brew install gnu-sed
-# # Install a modern version of Bash.
-# brew install bash
-# brew install bash-completion@2
+# Install some other useful utilities like `sponge`.
+brew install moreutils
+# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew install findutils
+# Install GNU `sed`, overwriting the built-in `sed`.
+# Don’t forget to add `$(brew --prefix gnu-sed)/libexec/gnu-sed` to `$PATH`.
+brew install gnu-sed
+# Install a modern version of Bash.
+brew install bash
+brew install bash-completion@2
 
-# # Switch to using brew-installed bash as default shell
-# if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-#   echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-#   chsh -s "${BREW_PREFIX}/bin/bash";
-# fi;
+# Switch to using brew-installed bash as default shell
+if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
+  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
+  chsh -s "${BREW_PREFIX}/bin/bash";
+fi;
 
 # # Install `wget` with IRI support.
 # # brew install wget --with-iri
@@ -164,7 +164,7 @@ brew install python@3.12
 brew install gradle
 brew install gradle-completion
 
-brew install google-cloud-sdk
+# brew install google-cloud-sdk
 brew install azure-cli
 
 # # Install hyperkit and minikube
