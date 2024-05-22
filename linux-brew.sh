@@ -159,6 +159,7 @@ brew install openjdk
 # sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 brew install python@3.11
 brew install python@3.12
+brew install pyenv
 
 
 brew install gradle
