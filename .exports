@@ -38,7 +38,10 @@ export GPG_TTY=$(tty);
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 # Default OpenJDK java home
-export JAVA_HOME=`/usr/libexec/java_home -v 11`
+if [ -f /usr/libexec/java_home ]
+then 
+  export JAVA_HOME=`/usr/libexec/java_home -v 11`
+fi
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:$(brew --prefix gnu-sed)/libexec/gnubin:$(brew --prefix grep)/libexec/gnubin:$PATH:$HOME/.pub-cache/bin"
 

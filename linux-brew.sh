@@ -35,7 +35,9 @@ then
   git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 fi
 
-# # Install command-line tools using Homebrew.
+# Install command-line tools using Homebrew.
+brew install fnt
+fnt install fonts-firacode
 # brew tap homebrew/cask-fonts
 # brew install --cask font-fira-code
 # brew install --cask font-3270-nerd-font font-caskaydia-cove-nerd-font font-fira-code-nerd-font font-hurmit-nerd-font font-heavy-data-nerd-font
@@ -77,8 +79,8 @@ fi
 # # brew install wget --with-iri
 # brew install wget
 
-# # Install GnuPG to enable PGP-signing commits.
-# brew install gnupg
+# Install GnuPG to enable PGP-signing commits.
+brew install gnupg
 
 # # Install more recent versions of some macOS tools.
 # brew install vim
@@ -123,8 +125,8 @@ fi
 # # # Install other useful binaries.
 # # brew install ack
 # # #brew install exiv2
-# brew install git
-# brew install git-lfs
+brew install git
+brew install git-lfs
 # # brew install gs
 # # brew install imagemagick --with-webp
 # # brew install lua
@@ -139,26 +141,26 @@ fi
 # # brew install vbindiff
 # # brew install zopfli
 
-# # Install command line apps.
-# brew install starship
-# brew install gh
-# brew install go
-# brew install k9s
+# Install command line apps.
+brew install starship
+brew install gh
+brew install go
+brew install k9s
 # brew install k3d
-# brew install nvm
-# brew install jq
-# brew install openjdk
+brew install nvm
+brew install jq
+brew install openjdk
 # sudo ln -sfn $(brew --prefix openjdk)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 # brew install openjdk@11
 # sudo ln -sfn $(brew --prefix openjdk@11)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 # brew install openjdk@17
 # sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 
-# brew install gradle
-# brew install gradle-completion
+brew install gradle
+brew install gradle-completion
 
-# brew install google-cloud-sdk
-# brew install azure-cli
+brew install google-cloud-sdk
+brew install azure-cli
 
 # # Install hyperkit and minikube
 # #brew install hyperkit
