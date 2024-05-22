@@ -26,6 +26,8 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
+alias ll="ls -al"
+
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
@@ -149,11 +151,18 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
+alias start_colima='colima start --arch aarch64 --vm-type=vz --vz-rosetta --network-address --kubernetes --layer'
+
 # Java home for different versions
 alias jhome='export JAVA_HOME=`/usr/libexec/java_home -v 18`'
 alias j11home='export JAVA_HOME=`/usr/libexec/java_home -v 11`'
-alias j8home='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
-
 
 alias bldvpn='gcloud compute start-iap-tunnel mgmt-pe-bld-01-cin-euwe1b-openvpn-iap 1194 --local-host-port=localhost:1194 --zone=europe-west1-b --project mgmt-vpn-bld-1733'
 alias tstvpn='gcloud compute start-iap-tunnel mgmt-pe-tst-01-cin-euwe2a-openvpn-iap 1194 --local-host-port=localhost:1194 --zone=europe-west2-a --project mgmt-vpn-tst-7312'
+
+alias tf="terraform"
+alias k="kubectl"
+alias kctx="kubectl config use-context"
+alias kns="kubectl config set-context --current --namespace"
+alias kall="kubectl get all"
+

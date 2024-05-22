@@ -168,7 +168,6 @@ function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
-
 function gitCreds() {
   if [ $# -ge 3 ]; then
     NAME=$2
@@ -208,6 +207,8 @@ function gitUser() {
 
   if [ "$KEY" = "snagi" ]; then
     gitCreds $FLAG "Sushil Nagi" "sushil.nagi@gmail.com"
+  elif [ "$KEY" = "netreo" ]; then
+    gitCreds $FLAG "Sushil Nagi" "snagi@netreo.com"
   elif [ "$KEY" = "elloyds" ]; then
     gitCreds $FLAG "Sushil Nagi" "sushil.nagi@e.lloydsbanking.com"
   elif [ "$KEY" = "lloyds" ]; then
@@ -244,4 +245,11 @@ check() {
     echo $2
     echo $3
   fi
+}
+
+load_nvm() {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$(brew --prefix nvm)/nvm.sh" ] && \. "$(brew --prefix nvm)/nvm.sh"  # This loads nvm
+  [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+  nvm use default
 }

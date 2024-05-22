@@ -7,5 +7,5 @@ for file in *; do
 	[ -r ~/"$file" ] && [ -d ~/"$file" ] && rm -rf ~/"$file";
 done;
 
-rm -rf ~/.oh-my-zsh
+# rm -rf ~/.oh-my-zsh
 rm -rf ~/.zcompdump*

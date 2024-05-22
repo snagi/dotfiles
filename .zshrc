@@ -1,12 +1,13 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+
+eval $(/opt/homebrew/bin/brew shellenv)
 
 # Load ZSH profile
 source "$HOME/.zsh_profile";
-source "$HOME/.common_profile";
-for file in $HOME/.{path,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
+# for file in $HOME/.{path,exports,aliases,functions,extra}; do
+# 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+# done;
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -115,4 +116,20 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Tell Docker CLI to talk to minikube's VM
-eval $(minikube docker-env)
+# eval $(minikube docker-env)
+
+
+source "$HOME/.common_profile";
+
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+source <(plz --completion_script)
+source "$(brew --prefix azure-cli)/etc/bash_completion.d/az"
+source <(kubectl completion zsh)
+
+complete -o default -o nospace -F _kubectl k;
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+

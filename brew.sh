@@ -141,12 +141,11 @@ brew install go
 brew install k9s
 brew install k3d
 brew install nvm
+brew install jq
 brew install openjdk
 sudo ln -sfn $(brew --prefix openjdk)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 brew install openjdk@11
 sudo ln -sfn $(brew --prefix openjdk@11)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
-brew install openjdk@8
-sudo ln -sfn $(brew --prefix openjdk@8)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-8.jdk
 brew install openjdk@17
 sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 
@@ -154,32 +153,59 @@ brew install gradle
 brew install gradle-completion
 
 brew install google-cloud-sdk
+brew install azure-cli
 
 # Install hyperkit and minikube
 #brew install hyperkit
 #brew install minikube
 
 # Install Docker CLI
+brew install kubectl
 brew install docker
 brew install docker-credential-helper
 brew install docker-compose
 brew install colima
-brew install microk8s
-brew install multipass
+brew install helm
+brew install terraformer aztfexport
 
-# brew tap thought-machine/please
-# brew install please
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
+brew tap thought-machine/please
+brew install please
 
 # Install cask application
-brew install drawio
-brew install iterm2
-brew install visual-studio-code
-brew install bitwarden
-brew install rectangle
-brew install maccy
-brew install google-chrome
-brew install google-drive
-brew install microsoft-remote-desktop
+brew install --cask drawio
+brew install --cask iterm2
+brew install --cask visual-studio-code
+brew install --cask bitwarden
+brew install --cask rectangle
+brew install --cask maccy
+brew install --cask google-chrome
+brew install --cask google-drive
+brew install --cask microsoft-remote-desktop
+brew install --cask slack
+brew install --cask 1password-cli 1password
+brew install --cask multipass
+
+brew install ubuntu/microk8s/microk8s
+brew install Azure/kubelogin/kubelogin
+
+brew tap isen-ng/dotnet-sdk-versions
+brew install --cask dotnet-sdk6-0-400
+brew install --cask dotnet-sdk7-0-200
+brew install --cask dotnet-sdk
+
+
+
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+brew install mssql-tools
+
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# curl -SsL https://github.com/kvz/json2hcl/releases/download/v0.1.1/json2hcl_0.1.1_darwin_arm64.tar.gz | tar -C  ~/.local/bin/ -xzv json2hcl > /dev/null && chmod 755 ~/.local/bin/json2hcl && json2hcl -version
