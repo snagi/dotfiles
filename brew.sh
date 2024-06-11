@@ -33,7 +33,7 @@ fi
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
-brew install --cask font-3270-nerd-font font-caskaydia-cove-nerd-font font-fira-code-nerd-font font-hurmit-nerd-font font-heavy-data-nerd-font
+brew install --cask font-3270-nerd-font font-caskaydia-cove-nerd-font font-fira-code-nerd-font font-hurmit-nerd-font font-heavy-data-nerd-font font-anonymous-pro font-cascadia-code font-cascadia-code-pl font-cascadia-mono font-cascadia-mono-pl font-cousine font-cousine-nerd-font font-fira-code font-inconsolata font-inconsolata-nerd-font font-kalam font-monoid font-monoid-nerd-font font-source-code-pro font-source-sans-pro font-source-serif-pro
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -182,27 +182,26 @@ brew install --cask bitwarden
 brew install --cask rectangle
 brew install --cask maccy
 brew install --cask google-chrome
+brew install --cask google-chrome-canary
 brew install --cask google-drive
 brew install --cask microsoft-remote-desktop
 brew install --cask slack
 brew install --cask 1password-cli 1password
-brew install --cask multipass
+# brew install --cask multipass
 
-brew install ubuntu/microk8s/microk8s
+# brew install ubuntu/microk8s/microk8s
 brew install Azure/kubelogin/kubelogin
 
 brew tap isen-ng/dotnet-sdk-versions
-brew install --cask dotnet-sdk6-0-400
-brew install --cask dotnet-sdk7-0-200
+# brew install --cask dotnet-sdk6-0-400
+# brew install --cask dotnet-sdk7-0-400
+# brew install --cask dotnet-sdk8-0-200
 brew install --cask dotnet-sdk
-
 
 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
 brew install mssql-tools
-
-
 
 
 # Remove outdated versions from the cellar.

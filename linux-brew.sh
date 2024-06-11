@@ -17,6 +17,13 @@ then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+# Install tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
+# sudo tailscale up --advertise-routes=192.168.1.0/24,192.168.10.0/24
+
 brew install zsh
 
 # Install oh-my-zsh
@@ -215,7 +222,8 @@ brew install please
 # brew update
 # brew install mssql-tools
 
-
+brew install tailscale
+brew services start tailscale
 
 
 # # Remove outdated versions from the cellar.
