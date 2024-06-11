@@ -10,6 +10,7 @@ function doIt() {
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
+    --exclude "linux-brew.sh" \
 		--exclude "remove.sh" \
 		--exclude "setup-ws.sh" \
 		--exclude "README.md" \
