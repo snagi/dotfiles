@@ -182,7 +182,7 @@ brew install --cask bitwarden
 brew install --cask rectangle
 brew install --cask maccy
 brew install --cask google-chrome
-brew install --cask google-chrome-canary
+brew install --cask google-chrome@canary
 brew install --cask google-drive
 brew install --cask microsoft-remote-desktop
 brew install --cask slack
