@@ -11,6 +11,7 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
     --exclude "linux-brew.sh" \
+    --exclude "linux-brew-base.sh" \
 		--exclude "remove.sh" \
 		--exclude "setup-ws.sh" \
 		--exclude "README.md" \

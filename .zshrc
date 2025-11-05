@@ -133,8 +133,13 @@ then
   source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
-source <(plz --completion_script)
-source "$(brew --prefix azure-cli)/etc/bash_completion.d/az"
+if [ -d $(brew --prefix azure-cli)/etc/bash_completion.d ]
+then
+  source "$(brew --prefix azure-cli)/etc/bash_completion.d/az"
+fi
+if command -v plz >/dev/null 2>&1; then
+  source <(plz --completion_script)
+fi
 source <(kubectl completion zsh)
 
 complete -o default -o nospace -F _kubectl k;
@@ -145,3 +150,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
