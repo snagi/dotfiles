@@ -257,3 +257,6 @@ load_nvm() {
   [ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix nvm)/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
   nvm use default
 }
+
+function wgit() { while ! eval "git $*"; do sleep 1; echo "Retrying ..."; done }
+function try() { while ! eval "$*"; do sleep 1; echo "Retrying ..."; done } 

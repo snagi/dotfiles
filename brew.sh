@@ -33,7 +33,27 @@ fi
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code
-brew install --cask font-3270-nerd-font font-caskaydia-cove-nerd-font font-fira-code-nerd-font font-hurmit-nerd-font font-heavy-data-nerd-font font-anonymous-pro font-cascadia-code font-cascadia-code-pl font-cascadia-mono font-cascadia-mono-pl font-cousine font-cousine-nerd-font font-fira-code font-inconsolata font-inconsolata-nerd-font font-kalam font-monoid font-monoid-nerd-font font-source-code-pro font-source-sans-pro font-source-serif-pro
+brew install --cask font-3270-nerd-font
+brew install --cask font-caskaydia-cove-nerd-font
+brew install --cask font-fira-code-nerd-font
+brew install --cask font-hurmit-nerd-font
+brew install --cask font-heavy-data-nerd-font
+brew install --cask font-anonymous-pro
+brew install --cask font-cascadia-code
+brew install --cask font-cascadia-code-pl
+brew install --cask font-cascadia-mono
+brew install --cask font-cascadia-mono-pl
+brew install --cask font-cousine
+brew install --cask font-cousine-nerd-font
+brew install --cask font-fira-code
+brew install --cask font-inconsolata
+brew install --cask font-inconsolata-nerd-font
+brew install --cask font-kalam
+brew install --cask font-monoid
+brew install --cask font-monoid-nerd-font
+brew install --cask font-source-code-pro
+# brew install --cask font-source-sans-pro
+# brew install --cask font-source-serif-pro
 
 # Make sure we’re using the latest Homebrew.
 brew update

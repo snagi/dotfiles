@@ -35,9 +35,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 mkdir -p ~/.kube/configs
 export KUBECONFIG=~/.kube/config
-# for config in ~/.kube/configs/*; do
-#   export KUBECONFIG=${KUBECONFIG}:${config}
-# done
+for config in ~/.kube/configs/*; do
+  export KUBECONFIG=${KUBECONFIG}:${config}
+done
 
 # Tell Docker CLI to talk to minikube's VM
 # eval $(minikube docker-env)
