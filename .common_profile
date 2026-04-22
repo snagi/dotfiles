@@ -45,4 +45,7 @@ fi
 # eval $(minikube docker-env)
 
 # Load NVM and NodeJS
-# load_nvm
+load_nvm
+
+# Load jenv and Java
+eval "$(jenv init -)"

@@ -32,28 +32,7 @@ fi
 # Install command-line tools using Homebrew.
 
 brew tap homebrew/cask-fonts
-brew install --cask font-fira-code
-brew install --cask font-3270-nerd-font
-brew install --cask font-caskaydia-cove-nerd-font
-brew install --cask font-fira-code-nerd-font
-brew install --cask font-hurmit-nerd-font
-brew install --cask font-heavy-data-nerd-font
-brew install --cask font-anonymous-pro
-brew install --cask font-cascadia-code
-brew install --cask font-cascadia-code-pl
-brew install --cask font-cascadia-mono
-brew install --cask font-cascadia-mono-pl
-brew install --cask font-cousine
-brew install --cask font-cousine-nerd-font
-brew install --cask font-fira-code
-brew install --cask font-inconsolata
-brew install --cask font-inconsolata-nerd-font
-brew install --cask font-kalam
-brew install --cask font-monoid
-brew install --cask font-monoid-nerd-font
-brew install --cask font-source-code-pro
-# brew install --cask font-source-sans-pro
-# brew install --cask font-source-serif-pro
+brew install --cask font-3270-nerd-font font-caskaydia-cove-nerd-font font-fira-code-nerd-font font-hurmit-nerd-font font-heavy-data-nerd-font font-anonymous-pro font-cascadia-code font-cascadia-code-pl font-cascadia-mono font-cascadia-mono-pl font-cousine font-cousine-nerd-font font-fira-code font-inconsolata font-inconsolata-nerd-font font-kalam font-monoid font-monoid-nerd-font font-source-code-pro font-source-sans-pro font-source-serif-pro
 
 # Make sure we’re using the latest Homebrew.
 brew update
@@ -162,12 +141,20 @@ brew install k9s
 brew install k3d
 brew install nvm
 brew install jq
+brew install jenv
 brew install openjdk
 sudo ln -sfn $(brew --prefix openjdk)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 brew install openjdk@11
 sudo ln -sfn $(brew --prefix openjdk@11)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
 brew install openjdk@17
 sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+brew install openjdk@18
+sudo ln -sfn $(brew --prefix openjdk@18)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-18.jdk
+
+jenv add "$(/usr/libexec/java_home)"
+jenv add "$(/usr/libexec/java_home -v 11)"
+jenv add "$(/usr/libexec/java_home -v 17)"
+jenv add "$(/usr/libexec/java_home -v 25)"
 
 brew install gradle
 brew install gradle-completion
@@ -191,8 +178,8 @@ brew install terraformer aztfexport
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 
-brew tap thought-machine/please
-brew install please
+# brew tap thought-machine/please
+# brew install please
 
 # Install cask application
 brew install --cask drawio

@@ -39,12 +39,15 @@ export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 # Default OpenJDK java home
 if [ -f /usr/libexec/java_home ]
-then 
-  export JAVA_HOME=`/usr/libexec/java_home -v 11`
+then
+  export JAVA_HOME=`/usr/libexec/java_home -v 17`
 fi
 
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$(brew --prefix findutils)/libexec/gnubin:$(brew --prefix gnu-sed)/libexec/gnubin:$(brew --prefix grep)/libexec/gnubin:$PATH:$HOME/.pub-cache/bin"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
